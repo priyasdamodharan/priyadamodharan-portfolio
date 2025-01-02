@@ -249,7 +249,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   width: 300px; /* Set a consistent width for all cards */
-  height: 400px; /* Set a consistent height for all cards */
+  height: 450px; /* Set a consistent height for all cards */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   border-radius: 8px;
   overflow: hidden;
@@ -263,10 +263,15 @@ body {
 }
 
 .card-description {
-  padding: 10px;
-  text-align: center;
-  flex-grow: 1; /* Allow description to grow if needed */
+  padding: 10px; /* Ensure padding for readability */
+  max-width: 100%; /* Prevent content overflow */
+  word-wrap: break-word; /* Handle long words */
+  white-space: normal; /* Allow text to wrap */
+  overflow: visible; /* Ensure content is not hidden */
+  display: block; /* Ensure it behaves like a block element */
+  height: auto; /* Automatically adjust height based on content */
 }
+
 
 .card-description h2 {
   font-size: 1.2em;
